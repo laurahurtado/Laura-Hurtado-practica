@@ -8,10 +8,8 @@ public class GanadoresPremios : MonoBehaviour
     public List<Premio> premios = new List<Premio>();
     public string[] peliculasNomidas = new string[] { "Parasito", "mujercitas", "Once Upon A time in Hollywood", "jojo rabitt", "joker" };
     public List<float> mayorPuntaje = new List<float>();
-  
 
-   
-    void Start()
+    private void Start()
     {
  
         premios.Add(new Premio("Parasitos", 90));
@@ -30,7 +28,7 @@ public class GanadoresPremios : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         
     }

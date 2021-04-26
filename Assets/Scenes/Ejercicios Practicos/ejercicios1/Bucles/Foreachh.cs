@@ -5,7 +5,7 @@ using UnityEngine;
 public class Foreachh : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         //array//
 
@@ -23,7 +23,7 @@ public class Foreachh : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         
     }

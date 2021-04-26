@@ -5,8 +5,9 @@ using UnityEngine;
 public class Condicionales : MonoBehaviour
 {
     public int PastelesHorneados = 10;
-    public int _Clientes = 5; 
-    void Start()
+    public int _Clientes = 5;
+
+    private void Start()
     {
         if (PastelesHorneados > _Clientes)
         {
@@ -21,7 +22,7 @@ public class Condicionales : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         
     }

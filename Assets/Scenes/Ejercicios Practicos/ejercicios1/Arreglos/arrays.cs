@@ -5,8 +5,8 @@ using UnityEngine;
 public class arrays : MonoBehaviour
 {
     public string[] mejoresDirectoresCine = new string[] { "Nolan", "Tarantino", "Anderson", "Coppola" };
-    
-    void Start()
+
+    private void Start()
     {
         print(mejoresDirectoresCine[0]);
         mejoresDirectoresCine[0] = "Interstellar";
@@ -27,7 +27,7 @@ public class arrays : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         
     }
