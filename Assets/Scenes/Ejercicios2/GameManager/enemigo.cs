@@ -7,7 +7,7 @@ public class enemigo : MonoBehaviour
     private int daño = -1;
     public GameManager  gameManager;
     public string killplayer;
-    public playercontroller GetInstance;
+    public playercontroller GetInstancee;
 
 
     private void Start()
@@ -18,11 +18,14 @@ public class enemigo : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "player")
+        if (collision.gameObject.tag == "Player")
         {
             Debug.Log("enemigo tocado");
-            gameManager.salud(daño);
+           GameManager.GetInstance().salud(daño);
+    
         }
     }
+
+
 }
 
