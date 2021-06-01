@@ -10,6 +10,24 @@ public class move : MonoBehaviour
     public float InputmovementX;
     public Animator anim;
     public bool noMove;
+
+
+    public float vida = 10.0f;
+    public float Disparo = 20.0f;
+    public float speed = 5.0f;
+
+
+    static move instatiablePlayer;
+    private void Awake()
+    {
+        instatiablePlayer = this;
+    }
+
+    public static move getInstance()
+    {
+        return instatiablePlayer;
+    }
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -24,26 +42,14 @@ public class move : MonoBehaviour
 
         movimiento();
 
-        //  if ( InputmovementX != 0 || InputmovementZ !=0) // se crea una variable que nos indique que cuando este en cero no active la animacion de caminar 
-        //  {
-        //     anim.SetBool("estaCaminando", true);
-        //  }
-        // else
-        //  {
-        //     anim.SetBool("estaCaminando", false);
-
-        //}
-
-        
-
         anim.SetFloat("velocidadX", InputmovementX);
         anim.SetFloat("velocidadZ", InputmovementZ);
 
         if (Input.GetKeyDown(KeyCode.F)) 
-       {
+         {
             Dance();
-          
-        }
+      //      StartCoroutine(noMove());
+         }
 
     }
     void Dance ()
@@ -52,12 +58,14 @@ public class move : MonoBehaviour
 
     }
 
-  //  IEnumerator noMove()
-   // {
-        
-//
-   // }
+  //  IEnumerator noMove() 
+  // {
+   //     if (Input.GetKeyDown("f"))
+    //    {
+   //         StartCoroutine("Fade");
+   //     }
 
+  //  }
     void movimiento()
       {
         rb.velocity = new Vector3(InputmovementX * velocidad, rb.velocity.y, InputmovementZ * velocidad);
